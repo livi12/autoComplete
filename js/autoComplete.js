@@ -41,7 +41,8 @@
 				self._text($ipt.val());
 			}
 		});
-		$ipt.on('keydown.autocomplete', function(evt) {
+		/*此处将$ipt改为 $(document) 点击之后还可以上下切换选项*/
+		$(document).on('keydown.autocomplete', function(evt) {
 			switch( evt.keyCode ) {
 			case KeyCode.ENTER:
 			case KeyCode.NUMPAD_ENTER:
