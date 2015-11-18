@@ -1,0 +1,54 @@
+@charset "utf-8";
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,button,textarea,p,blockquote,th,td{margin:0; padding:0;}
+body,button,input,select,textarea{font:12px/1.5 "Microsoft YaHei",arial,sans-serif;}
+body{color:#333;}
+table{border-collapse:collapse; border-spacing:0;}
+fieldset,img{border:0 none;}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal; font-weight:normal;}
+code,kbd,pre,samp,tt{font-family:"Microsoft YaHei",monospace,serif}
+ol,ul{list-style:none;}
+caption,th{text-align:left;}
+h1,h2,h3,h4,h5,h6{font-size:100%; font-weight:normal;}
+q:before,q:after{content:'';}
+abbr,acronym{border:0;}
+a{text-decoration:none;}
+a:hover{text-decoration:none;}
+button{cursor:pointer;}
+button,input,select,textarea{font-size:100%;}
+sub,sup{position:relative;font-size:75%;line-height:0;vertical-align:baseline}
+sup{top:-0.5em}
+sub{bottom:-0.25em}
+small{font-size:12px}
+legend{color:#000}
+input[type="text"], input[type="password"]{text-indent:5px; *text-indent:0 !important;}
+fieldset{border:1px #e5e5e5 solid;}
+legend{margin-left:20px; color:#777; font-size:14px; font-weight:bold;}
+:focus {outline:0;}
+li img{vertical-align:middle;}
+input[type="reset"]::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="submit"]::-moz-focus-inner, input[type="file"] > input[type="button"]::-moz-focus-inner{border:none;padding:0;}
+
+/*-------------------CSS Function-----------------*/
+body{background-color: #f9f8f6;}
+.f-clearfix:after{content:"\200B"; display:block; height:0; clear:both;overflow: hidden;}
+.f-clearfix{*zoom:1;}
+.f-bfc{overflow:hidden; *zoom:1;}
+.f-replace-w{text-indent:100%; overflow:hidden; white-space:nowrap;}
+.f-hide-text,.f-ht{font:0/0 a; color:transparent; text-shadow:none; background-color:transparent; border:0;}
+.f-fl{float:left !important; display:inline !important;}
+.f-fr{float:right !important; display:inline !important;}
+.f-mr0{margin-right:0 !important;}
+
+.m-autocomplete{display:inline-block; width:180px; color:#777; position:relative;}
+.m-autocomplete input[type="text"]{width:100%; height:14px; line-height:14px; padding:7px 0; border:none; border:1px #d9d9d9 solid; color:#777; text-indent:5px;}
+.m-autocomplete input[type="text"]:focus{outline:none;}
+.m-autocomplete .del{position:absolute; right:4px; top:5px; font-style:normal; cursor:pointer;}
+.m-autocomplete .del:hover{color:#f00;}
+.m-autocomplete .drop{display:-none; position:absolute; width:100%; left:0; top:29px; border:1px #d9d9d9 solid; z-index:5; background-color:#fff;}
+.m-autocomplete .drop ul{margin:0; padding:0;}
+.m-autocomplete .drop li{list-style:none; height:28px; line-height:28px; padding:0 5px; background-color:#fff;}
+.m-autocomplete .drop li:hover{background-color:#ccc;}
+.m-autocomplete .drop li.cur{background-color:#0ba299; color: #fff;}
+.m-autocomplete .drop .page{height:24px; background-color:#fff; border-top:1px #d9d9d9 solid;}
+.m-autocomplete .drop .page span{display:inline-block; width:50%; line-height:24px; font-size:16px; font-weight:bold; text-align:center; cursor:pointer; position:relative;}
+.m-autocomplete .drop .page span:first-child:after{content:''; position:absolute; right:0; top:0; width:0; height:100%; border-left:1px #d9d9d9 solid;}
+.m-autocomplete .drop .page span:hover{color:#1ba29a;}

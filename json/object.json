@@ -1,0 +1,75 @@
+{
+	"page":{
+		"curPage": 1,
+		"endPage": 3,
+		"limit": 10,
+		"offset": 0,
+		"pageCount": 10,
+		"pageSize": 10,
+		"startPage": 1,
+		"totalPage": 3,
+		"totalSize": 6
+	},
+	"items":[
+		{
+			"schoolId": 130,
+			"schoolName": "zyf测试学校0",
+			"schoolNature": 0
+		},
+		{
+			"schoolId": 131,
+			"schoolName": "zyf测试学校1",
+			"schoolNature": 1
+		},
+		{
+			"schoolId": 132,
+			"schoolName": "zyf测试学校2",
+			"schoolNature": 2
+		},
+		{
+			"schoolId": 133,
+			"schoolName": "zyf测试学校3",
+			"schoolNature": 3
+		},
+		{
+			"schoolId": 134,
+			"schoolName": "zyf测试学校4",
+			"schoolNature": 4
+		},
+		{
+			"schoolId": 135,
+			"schoolName": "zyf测试学校5",
+			"schoolNature":5
+		},
+		{
+			"schoolId": 136,
+			"schoolName": "zyf测试学校6",
+			"schoolNature": 6
+		},
+		{
+			"schoolId": 137,
+			"schoolName": "zyf测试学校7",
+			"schoolNature": 7
+		},
+		{
+			"schoolId": 138,
+			"schoolName": "zyf测试学校8",
+			"schoolNature": 8
+		},
+		{
+			"schoolId": 139,
+			"schoolName": "zyf测试学校9",
+			"schoolNature": 9
+		},
+		{
+			"schoolId": 1310,
+			"schoolName": "zyf测试学校10",
+			"schoolNature": 10
+		},
+		{
+			"schoolId": 1311,
+			"schoolName": "zyf测试学校11",
+			"schoolNature": 11
+		}
+	]
+}
