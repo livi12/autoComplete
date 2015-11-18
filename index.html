@@ -19,28 +19,28 @@
     </section>
 
     <section class="main-content">
-      <p>autoComlete.js api文档说明</p>
+      <p><strong>## autoComlete.js api文档说明</strong></p>
 
-<p>ipt.autocomplete({
-            /<em>数据请求的地址</em>/
-            url: '../json/object.json',
-            nameKey: 'schoolName',  /<em>要显示在下拉列表中的字符串，datas.items[i].nameKey   */
-            pageSize:5,/</em>一页显示多少条数据<em>/
-            itemsFn:function(datas){
-                /</em>datas为服务器传回的数据，复写该函数，获得一次请求获得的学校的列表<em>/
-                /</em>函数正文写在这里……<em>/
-            },
-            pageFn:function(datas){
-                /</em>datas为服务器传回的数据，复写该函数,
-                获得一次请求页面的信息<em>/
-                /</em>函数正文写在这里……<em>/
-            },
-            onChange:function(item){
-                /</em>item为获取的每一项的学校的信息<em>/
-                /</em>函数正文写在这里……*/
-            }</p>
+<pre><code>       `ipt.autocomplete({`
+        `/*数据请求的地址*/`
+        `url: '../json/object.json',`
+        `nameKey: 'schoolName', /*要显示在下拉列表中的字符串，datas.items[i].nameKey   */`
+        `pageSize:5,/*一页显示多少条数据*/`
+        `itemsFn:function(datas){`
+            `/*datas为服务器传回的数据，复写该函数，获得一次请求获得的学校的列表*/`
+            `/*函数正文写在这里……*/`
+        `},`
+        `pageFn:function(datas){`
+            `/*datas为服务器传回的数据，复写该函数,`
+            `获得一次请求页面的信息*/`
+            `/*函数正文写在这里……*/`
+        `},`
+        `onChange:function(item){`
+            `/*item为获取的每一项的学校的信息*/`
+            `/*函数正文写在这里……*/`
+        `}`
 
-<pre><code>    });
+    `});`
 </code></pre>
 
 <p>该插件只实现了鼠标放在input输入框时，上下移动，前后翻页的效果，当单击某一项后，上下切换元素，前后翻页均未绑定事情，这样做似乎是合理的。
