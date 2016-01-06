@@ -1,5 +1,7 @@
 #autoComplete 输入框自动补全插件
 
+[实例链接](http://192.168.20.21/static/widget/ui-autoComplete/page/)
+
 ##params
 
 ```javascript
@@ -19,6 +21,10 @@ ipt.autocomplete({
 		/*函数正文写在这里……*/
 	},
 	onChange:function(item){
+		/*item为获取的每一项的学校的信息，可复写该方法获取所需要的数据*/
+		/*函数正文写在这里……*/
+	},
+	textFn:function(item){
 		/*item为获取的每一项的学校的信息，可复写该方法获取所需要的数据*/
 		/*函数正文写在这里……*/
 	}
@@ -62,9 +68,10 @@ ipt.autocomplete({
 }
 ```
 
-`itemsFn` 用于获取上面hson的items数组
-`pageFn` 用于获取上面json的page object对象
-`onChange` 用于对当前选中item数据的进行操作，可以复写该方法以你想要的结果
+	`itemsFn` 用于获取上面hson的items数组
+	`pageFn` 用于获取上面json的page object对象
+	`onChange` 用于对当前选中item数据的进行操作，可以复写该方法以你想要的结果
+	`textFn` 选择某项时，可以复写该方法，将所需要的文字显示到输入框中。
 
 例如：返回该选中项的 schoolId ，诸如此类
 
@@ -78,4 +85,3 @@ onChange:function(item){
 本例子中的引用的是autoComplete.js插件，未调用http.js 和utils.js文件
 乐课网中的引用的是本例中的autoComplete.js插件，用sea.js进行封装了的，需要引用http.js 和utils.js文件
 ~~~
-
