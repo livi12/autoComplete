@@ -12,6 +12,7 @@
 	function AutoComplete(element, options) {
 		var self = this;
 		var ops = self.options = _.extend({}, options);
+		self.textFn = ops.textFn.bind(self);
 
 		self.item = null;
 		self.text = '';
@@ -70,10 +71,6 @@
 
 		var $el = self.$el;
 		$el.on('click.autocomplete', 'li', function(evt) {
-			self._mark($(evt.target));
-		});
-
-		$el.on('dblclick.autocomplete', 'li', function(evt) {
 			self._mark($(evt.target));
 			self._select();
 		});
@@ -229,16 +226,12 @@
 			self._mark($lis.first());
 		}
 	};
-	/*获得当前输入框中的文字*/
-	AutoComplete.prototype._text4item = function(item) {
-		return item && item[this.options.nameKey] || '';;
-	};
 	/*选中*/
 	AutoComplete.prototype._select = function() {
 		var self = this;
 
 		// 查看文本和已选中项是否一致
-		var itemText = self._text4item(self.item);
+		var itemText = self.textFn(self.item);
 		if(itemText === self.text) {
 			self.$el.find('.drop').remove();
 			return false;
@@ -258,11 +251,10 @@
 
 		self.item = item;
 		if(updateText) {
-			var text = self._text4item(item);
+			var text = self.textFn(item);
 			self.text = text;
 			self.$ipt.val(text);
 		}
-
 		ops.onChange.call(self, item);
 	};
 
@@ -286,7 +278,6 @@
 
 			var data = $this.data('leke.autocomplete');
 			var options = $.extend({}, $.fn.autocomplete.defaults, typeof option == 'object' && option);
-
 			if (!data){
 				data = new AutoComplete(this, options);
 				$this.data('leke.autocomplete', data);
@@ -305,9 +296,14 @@
 	$.fn.autocomplete.defaults = {
 		url: '',
 		onChange: function(item) {
-			console && console.log(item);
+			if(item){
+				console.log(item.schoolId);
+			}
 		},
 		nameKey: 'name',
+		textFn: function(item) {
+			return item && item[this.options.nameKey] || '';
+		},
 		itemsFn: function(datas) {
 			return datas.items;
 		},
